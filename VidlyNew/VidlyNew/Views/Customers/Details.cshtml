@@ -1,0 +1,15 @@
+﻿@model VidlyNew.Models.Customer
+@{
+    ViewBag.Title = Model.Name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{ 
+    var classBirthName = Model.Birthdate == null ? null : "birthDatePresent";
+}
+
+
+<h2>@Model.Name</h2>
+<ul>
+<li><h5>MemberShip Type : @Model.MembershipType.Name</h5></li>
+<li><h5 class="@classBirthName">Birthdate : @Model.Birthdate</h5></li>
+</ul>
